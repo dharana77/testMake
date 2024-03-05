@@ -13,7 +13,7 @@ def is_converted_spotify_to_appleMusic():
 
 def is_music_in_spotify_not_in_appleMusic():
     appleMusic = convert_spotify_to_appleMusic()
-    assert
+    assert is
 
 def is_standard_country_US():
     assert spotify.country == "US"

@@ -1,3 +1,7 @@
 from django.shortcuts import render
+import json
 
-# Create your views here.
+
+def convert_spotify_to_applemusic():
+    spotify = json.loads("/static/spotify")
+    return spotify

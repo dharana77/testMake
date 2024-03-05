@@ -1,0 +1,7 @@
+
+developer_token = "eyJhbGciOiJFUzI1NiIsImtpZCI6IjNHM0ZOV0ZIM1ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJRNDc0M1Y2M1NCIiwiZXhwIjoxNzA4NDY4MDE0LCJpYXQiOjE3MDg0MjQ4MTR9.mnuxkezVi4HUROFyuPUCAGZCPwT4vR_VO6EgSKZmMqXrUGNHZu2bck3I4fDdmzWZViZA-pz-FkxSVcgwPSNkmA"
+
+
+def get_access_token():
+    return developer_token
+
