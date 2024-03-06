@@ -8,6 +8,7 @@ class Spotify:
         self.playlist = []
         self.track_information = {}
         self.headers = {"Authorization": f"Bearer {self.token}"}
+        self.default_country = "US"
 
     def get_playlist_tracks(self, playlist):
         res = {}

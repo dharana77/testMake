@@ -8,6 +8,7 @@ class AppleMusic:
         self.playlist = []
         self.track_information = {}
         self.headers = {"Authorization": f"Bearer {self.token}"}
+        self.default_country = "US"
 
     def search_apple_music_song(self, song, artist):
         """
