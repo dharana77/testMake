@@ -19,5 +19,5 @@ from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('convert/', include('convert.urls'))
+    path('streaming/', include('streaming.urls')),
 ]

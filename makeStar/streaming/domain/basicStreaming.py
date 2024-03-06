@@ -1,4 +1,4 @@
-from makeStar.makeStar.auth import streaming_auth
+from makeStar.streaming.auth import streaming_auth
 
 
 class BasicStreaming():
