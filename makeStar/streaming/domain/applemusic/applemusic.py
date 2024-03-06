@@ -27,5 +27,12 @@ class AppleMusic:
         else:
             return None
 
+    def get_song_info(self):
+        #...
+        return
+    def get_music_info(self):
+        #...
+        return
+
     def get_available_countries(self):
         return self.track_information["countries"]
