@@ -1,14 +1,18 @@
 from makeStar.streaming.auth import streaming_auth
 import requests
 
+from makeStar.streaming.domain.abstract_basic_streaming import AbstractBasicStreaming
 
-class Spotify:
+
+class Spotify(AbstractBasicStreaming):
     def __init__(self):
-        self.token = streaming_auth.get_token()
         self.playlist = []
         self.track_information = {}
+        #TODO add token and header
+        """
+        self.token = streaming_auth.get_token()
         self.headers = {"Authorization": f"Bearer {self.token}"}
-        self.default_country = "US"
+        """
 
     def get_playlist_tracks(self, playlist):
         res = {}

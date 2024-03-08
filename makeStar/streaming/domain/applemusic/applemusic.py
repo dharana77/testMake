@@ -1,8 +1,11 @@
 import requests
 from streaming.auth import streaming_auth
 
+from makeStar.errors import error_status
+from makeStar.streaming.domain.abstract_basic_streaming import AbstractBasicStreaming
 
-class AppleMusic:
+
+class AppleMusic(AbstractBasicStreaming):
     def __init__(self):
         self.token = streaming_auth.get_token()
         self.playlist = []
@@ -10,7 +13,7 @@ class AppleMusic:
         self.headers = {"Authorization": f"Bearer {self.token}"}
         self.default_country = "US"
 
-    def search_apple_music_song(self, song, artist):
+    def search_apple_music_by_song_and_artist(self, song: str, artist: str):
         """
             args:
                 song = "Ditto"
@@ -26,14 +29,7 @@ class AppleMusic:
         if response.status_code == 200:
             return response.json()
         else:
-            return None
-
-    def get_song_info(self):
-        #...
-        return
-    def get_music_info(self):
-        #...
-        return
+            raise error_status.MusicNotExistInAppleMusic
 
     def get_available_countries(self):
         return self.track_information["countries"]
